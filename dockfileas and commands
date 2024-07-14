@@ -1,0 +1,48 @@
+doker codes and commands 
+
+  echo "start"
+SOURCE_DIR="root/sample"
+BACK_UP="root/backup"
+DATE = $(date + "%d -%m -%y _ %H- %M- %S")
+BACKUP_FILE="BACKUP_DIR/linuxbackup-$DATE.tar.gz"
+echo " creating backup dir"
+mkdir -p "$BACKUP_DIR"
+echo " $BACKUP_DIR created "
+echo "create the backup file"
+tar -czvf "$BACKUP_FILE" "$SOURCE_DIR"
+echo "**backup sucess"
+docker --version
+
+  *********************************************************************************************************************************************
+sudo yum search docker
+sudo yum info docker
+sudo yum install -y docker
+sudo systemctl enable docker.service
+sudo systemctl start docker.service
+sudo systemctl status docker.service
+docker --version
+sudo yum install git -y
+sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo chmod +x /usr/local/bin/docker-compose
+docker-compose --version
+*************************************************************************************************************************************************
+docker compose : when we want to run multiple containers as a single service then we go for docker compose..!!!
+  task: to perform docker compose, "docker compose file should be installed.
+        * we have to create docker compose file docker compose file should be written in .yml language.
+        *  sampe file name should be used : docker-compose.yml
+
+  version: '3'
+services:
+ web:
+   image: nginx
+   ports:
+      - '8000:80'
+ db:
+   image: redis
+
+
+
+
+***************************************************************************************************************************************************
+  
+  

@@ -44,7 +44,33 @@ to run the file sh docker.sh
  #docker  rmi  (imagename-ex: http)  : to remove image
  #docker commit (container id)  (repository name ex: webapp)
  #docker push (respository name) --> login with username and pw first
- # docker push repositoryname/imagename 
+ #docker push repositoryname/imagename
+ #docker pull repositoryname : to pull from the remote repository to local repository
+ # docker logout : to logout from docker
+ # exit : to exit for present working directory
+
+
+task 5: pull one amazon linux image and run a contianter with the name called webapp and install Tomcat and start the "Tomcat service"
+#docker pull amazonlinux : pulling amazon linux image
+#docker run -it -d --name webpapp amazonlinux
+#docker ps
+#docker exec -it (imageid)  /bin/bash  : The docker exec -it command allows you to run commands inside a running Docker container interactively. 
+#docker ls
+#yum install wget -y  : wget is a command-line utility for downloading files from the web. It supports downloading via HTTP, HTTPS, and FTP protocols.
+#yum wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.91/bin/apache-tomcat-9.0.91.tar.gz    --> google tomcat 9 copy link tar.gz
+#yum install tar -y  --> to insall tar 
+#yum tar
+
+
+
+
+
+
+
+
+
+
+
 ************************
 *************************************************************************************************************************************************
 docker compose : when we want to run multiple containers as a single service then we go for docker compose..!!!

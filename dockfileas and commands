@@ -1,6 +1,9 @@
 doker codes and commands 
 
-  echo "start"
+task: back all the files to one with extension of tar.gz based on he time of backup
+ 
+
+echo "start"
 SOURCE_DIR="root/sample"
 BACK_UP="root/backup"
 DATE = $(date + "%d -%m -%y _ %H- %M- %S")
@@ -11,9 +14,13 @@ echo " $BACKUP_DIR created "
 echo "create the backup file"
 tar -czvf "$BACKUP_FILE" "$SOURCE_DIR"
 echo "**backup sucess"
-docker --version
+
 
   *********************************************************************************************************************************************
+
+code to install docker 
+in vi.docker sh file it contains below code
+
 sudo yum search docker
 sudo yum info docker
 sudo yum install -y docker
@@ -25,6 +32,20 @@ sudo yum install git -y
 sudo curl -L https://github.com/docker/compose/releases/download/1.22.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
 docker-compose --version
+
+
+to run the file sh docker.sh
+
+ #docker images : provides list of all docker images
+ #docker ps :  provides running container list.
+ #docker pull httpd : to pull the image httpd
+ #docker run -it -d httpd : to run docker images httpd once we run the images httpd it will convert images to containter.
+ #docker  rm -f (container id): to remove container forcefully.
+ #docker  rmi  (imagename-ex: http)  : to remove image
+ #docker commit (container id)  (repository name ex: webapp)
+ #docker push (respository name) --> login with username and pw first
+ # docker push repositoryname/imagename 
+************************
 *************************************************************************************************************************************************
 docker compose : when we want to run multiple containers as a single service then we go for docker compose..!!!
   task: to perform docker compose, "docker compose file should be installed.
